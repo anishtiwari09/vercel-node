@@ -14,10 +14,10 @@ app.use(express.json())
 app.use('/',router);
 async function start() {
     await connect()
-    // app.listen(PORT, () => {
+    app.listen(PORT, () => {
 
-    //     console.log("Connected at " + PORT)
-    // })
+        console.log("Connected at " + PORT)
+    })
     // const sslServer=https.createServer({
     //     key:fs.readFileSync(path.join(__dirname,'key.pem')),
     //     cert:fs.readFileSync(path.join(__dirname,'cert.pem'))
@@ -26,5 +26,5 @@ async function start() {
    return serverless(app)
 
 };
-
+start()
 module.exports=app
