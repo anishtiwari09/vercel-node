@@ -27,7 +27,7 @@ const updateQuizDetails = async (req, res) => {
             addValue = -2
             level = -1
         }
-        if(currentLevel==10||currentQuestion==10||(currentQuestion==1&&req.query.isCorrect == "false"))
+        if(currentLevel==10||currentQuestion==10||(currentLevel==1&&req.query.isCorrect == "false"))
         quizCompleted=true
         if(!quizCompleted){
             currentQuestion+=1
